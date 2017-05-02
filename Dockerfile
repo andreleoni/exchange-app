@@ -11,4 +11,4 @@ RUN bundle install
 
 COPY . .
 
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD puma -C config/puma.rb
