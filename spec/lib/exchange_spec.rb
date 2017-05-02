@@ -2,7 +2,7 @@ require 'spec_helper'
 require './lib/exchange'
 
 describe Currency do
-	before(:each) do
+	before do
 		json = JSON.parse(File.read('./spec/fixtures/currency_list.json'))
 		currency, currency_dest = json['currency_list'].sample(2)
 		quantity = rand(1..1000)
