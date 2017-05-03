@@ -4,10 +4,10 @@ require './lib/exchange'
 describe Currency do
 	before do
 		json = JSON.parse(File.read('./spec/fixtures/currency_list.json'))
-		currency, currency_dest = json['currency_list'].sample(2)
+		currency, currency_destination = json['currency_list'].sample(2)
 		quantity = rand(1..1000)
 
-		@value = Currency::exchange(currency, currency_dest, quantity)
+		@value = Currency::exchange(currency, currency_destination, quantity)
 	end
 
 	it 'Exchange be a number' do
