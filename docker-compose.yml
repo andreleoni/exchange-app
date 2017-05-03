@@ -4,18 +4,22 @@ services:
   postgres:
     image: 'postgres:9.5'
     ports:
-      - 5432:5432
+        - 5432:5432
     volumes:
       - 'postgres:/var/lib/postgresql/data'
 
   website:
+    tty: true
+    stdin_open: true
     depends_on:
       - 'postgres'
     build: .
     ports:
       - '3000:3000'
     volumes:
-      - '.:/usr/src/app'
+      - '.:/exchange-app'
+    env_file:
+      - '.env'
 
 volumes:
   postgres:

@@ -21,3 +21,35 @@
     }
   }
 }
+
+.change-values-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px  
+}
+
+.loading {
+  -webkit-animation-name: rotation;
+  animation-name: rotation;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes rotation{
+  from{
+    transform: rotate(-40deg);
+  }
+  80% {
+    transform: rotate(340deg);
+  }
+  99.999%{
+    transform: rotate(460deg);
+  }
+  to{
+    transform: rotate(-40deg);
+  }
+}
