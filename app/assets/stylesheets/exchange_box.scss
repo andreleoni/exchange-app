@@ -2,6 +2,11 @@
   .card{
     border: 0;
     .card-header{
+      border-top: 2px solid #464a4c;
+      border-top-left-radius: 5px !important;
+      border-top-right-radius: 5px !important;
+      position: relative;
+      top: -1px;
       background-color: #878d99;
       border-radius: 0;
       color: white;
@@ -25,7 +30,7 @@
 .change-values-icon {
   display: inline-block;
   width: 20px !important;
-  height: 20px !important;  
+  height: 20px !important;
 }
 
 .change-values-div {
