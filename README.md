@@ -6,7 +6,7 @@ Exchange Online App is a open source app for money convert that use http://fixer
 
 Link to access: http://exchange-online-app.herokuapp.com/
 
-[![Screen Shot 2017-05-03 at 23.39.35.png](https://s4.postimg.org/memfhfo65/Screen_Shot_2017-05-03_at_23.39.35.png)](https://postimg.org/image/gqg4qjjtl/)
+[![Screen Shot 2017-05-03 at 23.39.35.png](https://s22.postimg.org/keb7ffvg1/Screen_Shot_2017-05-03_at_23.39.35.png)](https://postimg.org/image/43b3j4iy5/)
 
 ### Start docker-compose
 
