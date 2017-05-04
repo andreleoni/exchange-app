@@ -11081,25 +11081,24 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 /* line 1, /exchange-app/app/assets/stylesheets/home.scss */
 body {
-  background: url(/background-img.jpg) no-repeat center center fixed;
-  background-size: cover;
+  background-color: black;
 }
 
-/* line 9, /exchange-app/app/assets/stylesheets/home.scss */
+/* line 5, /exchange-app/app/assets/stylesheets/home.scss */
 .title-box {
   margin-top: 20%;
 }
-/* line 11, /exchange-app/app/assets/stylesheets/home.scss */
+/* line 7, /exchange-app/app/assets/stylesheets/home.scss */
 .title-box .title {
   color: white;
   text-shadow: 2px 0px 2px #000000;
 }
 
-/* line 17, /exchange-app/app/assets/stylesheets/home.scss */
+/* line 13, /exchange-app/app/assets/stylesheets/home.scss */
 .exchange_box {
   margin: 10px auto;
 }
-/* line 19, /exchange-app/app/assets/stylesheets/home.scss */
+/* line 15, /exchange-app/app/assets/stylesheets/home.scss */
 .exchange_box .logo-box {
   margin: 0 auto;
   padding-bottom: 10px;
@@ -11111,35 +11110,41 @@ body {
 }
 /* line 4, /exchange-app/app/assets/stylesheets/exchange_box.scss */
 .exchange_box .card .card-header {
+  border-top: 2px solid #464a4c;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+  position: relative;
+  top: -1px;
   background-color: #878d99;
   border-radius: 0;
   color: white;
   font-weight: 700;
 }
-/* line 10, /exchange-app/app/assets/stylesheets/exchange_box.scss */
+/* line 15, /exchange-app/app/assets/stylesheets/exchange_box.scss */
 .exchange_box .card .card-block {
+  background-color: whitesmoke;
   padding-top: 10px;
 }
-/* line 12, /exchange-app/app/assets/stylesheets/exchange_box.scss */
+/* line 18, /exchange-app/app/assets/stylesheets/exchange_box.scss */
 .exchange_box .card .card-block .title {
   color: #878d99;
   font-weight: 700;
 }
-/* line 16, /exchange-app/app/assets/stylesheets/exchange_box.scss */
+/* line 22, /exchange-app/app/assets/stylesheets/exchange_box.scss */
 .exchange_box .card .card-block .btn-exchange {
   background-color: #5bc0de;
   border-color: #5bc0de;
   border-radius: 0;
 }
 
-/* line 25, /exchange-app/app/assets/stylesheets/exchange_box.scss */
+/* line 31, /exchange-app/app/assets/stylesheets/exchange_box.scss */
 .change-values-icon {
   display: inline-block;
   width: 20px !important;
   height: 20px !important;
 }
 
-/* line 31, /exchange-app/app/assets/stylesheets/exchange_box.scss */
+/* line 37, /exchange-app/app/assets/stylesheets/exchange_box.scss */
 .change-values-div {
   float: right;
   padding: 2px 2px;
@@ -11155,19 +11160,19 @@ body {
   top: -3px;
 }
 
-/* line 46, /exchange-app/app/assets/stylesheets/exchange_box.scss */
+/* line 52, /exchange-app/app/assets/stylesheets/exchange_box.scss */
 .change-values-div:hover {
   background-color: #f2f2f2;
 }
 
-/* line 50, /exchange-app/app/assets/stylesheets/exchange_box.scss */
+/* line 56, /exchange-app/app/assets/stylesheets/exchange_box.scss */
 .change-values-div:active {
   background-color: #f2f2f2;
-  -webkit-transform: translateY(4px);
-          transform: translateY(4px);
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
-/* line 55, /exchange-app/app/assets/stylesheets/exchange_box.scss */
+/* line 61, /exchange-app/app/assets/stylesheets/exchange_box.scss */
 .refresh-icon {
   right: 3px !important;
   top: 5px !important;

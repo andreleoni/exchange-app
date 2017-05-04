@@ -16920,6 +16920,28 @@ var Popover = function ($) {
 (function() {
   $(document).ready(function() {
     $('#quantity').blur(function() {
+      return ExchangeApp.exchange_call();
+    });
+    $('#quantity').keyup(function(event) {
+      if (event.keyCode === 13) {
+        return ExchangeApp.exchange_call();
+      }
+    });
+    $('.change-values-div').click(function() {
+      var currency, currency_destination;
+      currency = $("#currency").val();
+      currency_destination = $("#currency_destination").val();
+      $("#currency").val(currency_destination);
+      $("#currency_destination").val(currency);
+      return ExchangeApp.exchange_call();
+    });
+    return $('#currency, #currency_destination').change(function() {
+      return ExchangeApp.exchange_call();
+    });
+  });
+
+  this.ExchangeApp = {
+    exchange_call: function() {
       $('.refresh-icon').fadeIn('fast');
       $.ajax('/exchange', {
         type: 'POST',
@@ -16939,56 +16961,8 @@ var Popover = function ($) {
         }
       });
       return false;
-    });
-    $('#quantity').keyup(function(event) {
-      if (event.keyCode === 13) {
-        $('.refresh-icon').fadeIn('fast');
-        $.ajax('/exchange', {
-          type: 'POST',
-          dataType: 'json',
-          data: {
-            currency: $("#currency").val(),
-            currency_destination: $("#currency_destination").val(),
-            quantity: $("#quantity").val()
-          },
-          error: function(jqXHR, textStatus, errorThrown) {
-            alert(textStatus);
-            return $('.refresh-icon').fadeOut('slow');
-          },
-          success: function(data, text, jqXHR) {
-            $('#result').val(data.value);
-            return $('.refresh-icon').fadeOut('slow');
-          }
-        });
-        return false;
-      }
-    });
-    return $('.change-values-div').click(function() {
-      var currency, currency_destination;
-      currency = $("#currency").val();
-      currency_destination = $("#currency_destination").val();
-      $("#currency").val(currency_destination);
-      $("#currency_destination").val(currency);
-      $('.refresh-icon').fadeIn('fast');
-      return $.ajax('/exchange', {
-        type: 'POST',
-        dataType: 'json',
-        data: {
-          currency: $("#currency").val(),
-          currency_destination: $("#currency_destination").val(),
-          quantity: $("#quantity").val()
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          alert(textStatus);
-          return $('.refresh-icon').fadeOut('slow');
-        },
-        success: function(data, text, jqXHR) {
-          $('#result').val(data.value);
-          return $('.refresh-icon').fadeOut('slow');
-        }
-      });
-    });
-  });
+    }
+  };
 
 }).call(this);
 (function() {
