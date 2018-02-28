@@ -14,6 +14,10 @@ jobs:
           command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
 
       - run:
+          name: precompile
+          command: rake assets:precompile
+
+      - run:
           name: Specs
           command: rspec
 
