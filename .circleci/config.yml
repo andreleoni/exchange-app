@@ -1,8 +1,20 @@
 version: 2
 jobs:
   build:
+    environment:
+      - RAILS_ENV: "test"
+      - CI: true
+    working_directory: ~/website
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "A first hello"
+
+      - store_artifacts:
+        path: coverage/.resultset.json
+        prefix: coverage
+
+      - deploy:
+        name: Merge and copy coverage data
+        command: bundle exec report_coverage
