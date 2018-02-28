@@ -10,15 +10,8 @@ jobs:
     steps:
       - checkout
 
-      # - store_artifacts:
-        # path: coverage/.resultset.json
-        # prefix: coverage
-
       - run:
           command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
-
-      - run:
-          command: bundle exec rake db:create db:structure:load --trace
 
       - run:
           name: Specs
