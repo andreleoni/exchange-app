@@ -25,6 +25,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
+  gem 'codeclimate_circle_ci_coverage'
 end
 
 group :development do
