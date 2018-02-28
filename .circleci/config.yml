@@ -15,11 +15,11 @@ jobs:
 
       - run:
           name: precompile
-          command: rake assets:precompile
+          command: bundle exec rake assets:precompile
 
       - run:
           name: Specs
-          command: rspec
+          command: bundle exec rspec
 
       - store_artifacts:
           path: coverage/.resultset.json
