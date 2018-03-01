@@ -6,7 +6,7 @@ jobs:
       - CI: true
     working_directory: ~/website
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: andreleoni/exchange
     steps:
       - checkout
 
