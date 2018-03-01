@@ -23,6 +23,7 @@ jobs:
           name: Specs
           command: bundle exec rspec
 
+
       - store_artifacts:
           path: coverage/.resultset.json
           prefix: coverage
