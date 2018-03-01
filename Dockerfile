@@ -1,6 +1,6 @@
-MAINTAINER andreluizleoni@gmail.com
-
 FROM ruby:2.3-slim
+
+MAINTAINER andreluizleoni@gmail.com
 
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
       build-essential nodejs libpq-dev
