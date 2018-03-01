@@ -19,4 +19,7 @@ jobs:
 
       - run:
           name: Specs
-          command: bundle exec rspec && CODECLIMATE_REPO_TOKEN=$CODECLIMATE_REPO_TOKEN bundle exec codeclimate-test-reporter
+          command: bundle exec rspec
+      - run:
+          name: Send tests to codeclimate
+          command: CODECLIMATE_REPO_TOKEN=$CODECLIMATE_REPO_TOKEN bundle exec codeclimate-test-reporter
