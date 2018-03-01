@@ -9,6 +9,8 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
+      - run:
+          command: sudo apt-get install nodejs
 
       - run:
           command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
