@@ -22,20 +22,10 @@ jobs:
           command: bundle exec rspec
 
 
-      - run:
-          command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
-
-      - run:
-          command: bundle exec rake db:create db:structure:load --trace
-
-      - run:
-          name: Specs
-          command: KNAPSACK_TEST_FILE_PATTERN="spec/**/*_spec.rb" bundle exec rake "knapsack:rspec[--format progress --format RspecJunitFormatter -o ~/rspec/specs.xml]"
-
       - store_artifacts:
-          path: coverage/.resultset.json
-          prefix: coverage
+        path: coverage/.resultset.json
+        prefix: coverage
 
       - deploy:
-          name: Merge and copy coverage data
-          command: bundle exec report_coverage
+        name: Merge and copy coverage data
+        command: bundle exec report_coverage
