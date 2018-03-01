@@ -10,4 +10,16 @@ class HomeController < ApplicationController
   def new_test_method
   	render json: ""
   end
+
+  def hehehe
+  	render json: "hehehe"
+  end
+
+  def hahaha
+  	render json: "hahaha"
+  end
+
+  def oioioi
+  	render json: "oioioi"
+  end
 end
