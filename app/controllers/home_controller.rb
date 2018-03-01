@@ -10,4 +10,8 @@ class HomeController < ApplicationController
   def novo_teste
     "asdadsa"
   end
+
+  def velho_teste
+    "zzzzz"
+  end
 end
