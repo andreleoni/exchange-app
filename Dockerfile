@@ -3,7 +3,7 @@ FROM ruby:2.3-slim
 MAINTAINER andreluizleoni@gmail.com
 
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
-      build-essential nodejs libpq-dev
+      build-essential nodejs libpq-dev libsqlite3-dev git
 
 ENV INSTALL_PATH /exchange-app
 RUN mkdir -p $INSTALL_PATH
