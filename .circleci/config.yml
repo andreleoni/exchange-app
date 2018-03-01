@@ -21,11 +21,10 @@ jobs:
           name: Specs
           command: bundle exec rspec
 
-
       - store_artifacts:
-        path: coverage/.resultset.json
-        prefix: coverage
+          path: coverage/.resultset.json
+          prefix: coverage
 
       - deploy:
-        name: Merge and copy coverage data
-        command: bundle exec report_coverage
+          name: Merge and copy coverage data
+          command: bundle exec report_coverage
