@@ -11,6 +11,10 @@ jobs:
       - checkout
 
       - run:
+          name: git install
+          command: sudo apt-get install git
+          
+      - run:
           command: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
 
       - run:
