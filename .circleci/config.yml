@@ -25,7 +25,7 @@ jobs:
 
       - store_artifacts:
           path: coverage/.resultset.json
-          prefix: coverage/.resultset.json
+          prefix: coverage
 
       - deploy:
           name: Merge and copy coverage data
