@@ -1,5 +1,3 @@
-MAINTAINER andreluizleoni@gmail.com
-
 FROM ruby:2.3-slim
 
 MAINTAINER andreluizleoni@gmail.com
