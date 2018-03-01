@@ -6,7 +6,7 @@ jobs:
       - CI: true
     working_directory: ~/website
     docker:
-      - image: enjoei/ruby-ci:2.4.2
+      - image: andreleoni/exchange:ci
     steps:
       - checkout
 
