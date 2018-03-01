@@ -19,12 +19,4 @@ jobs:
 
       - run:
           name: Specs
-          command: bundle exec rspec
-
-      - store_artifacts:
-          path: coverage/.resultset.json
-          prefix: coverage
-
-      - deploy:
-          name: Merge and copy coverage data
-          command: bundle exec report_coverage
+          command: bundle exec rspec && CODECLIMATE_REPO_TOKEN=$CODECLIMATE_REPO_TOKEN bundle exec codeclimate-test-reporter
