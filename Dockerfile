@@ -1,3 +1,5 @@
+MAINTAINER andreluizleoni@gmail.com
+
 FROM ruby:2.3-slim
 
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
@@ -15,5 +17,3 @@ RUN bundle install --system
 COPY . .
 
 CMD puma -C config/puma.rb
-
-

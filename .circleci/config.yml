@@ -6,7 +6,7 @@ jobs:
       - CI: true
     working_directory: ~/website
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: enjoei/ruby-ci:2.4.2
     steps:
       - checkout
       - run:
