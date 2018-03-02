@@ -14,4 +14,8 @@ class HomeController < ApplicationController
   def velho_teste
     "zzzzz"
   end
+  
+  def velho_teste
+    "zzzzz"
+  end
 end
